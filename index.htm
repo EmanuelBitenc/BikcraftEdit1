@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="img/icon.png" type="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posicionamento Css</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img id="marca" src="img/bikcraft.svg" alt="Marca" />
-    <div id="links">
-      <a href="/">Sobre</a>
-      <a href="/">Produtos</a>
-      <a href="/">Lojas</a>
-      <a href="/">Contato</a>
-    </div>
-    <div id="painel">
-      <div id="conteudo">
-        <span id="detalhe"></span>
-        <h1>Bicicletas Feitas a Mão</h1>
+    <header>
+      <img id="marca" src="img/bikcraft.svg" alt="Marca" />
+      <nav aria-label="Principal" >
+        <ul id="links"> 
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Produtos</a></li>
+          <li><a href="/">Lojas</a></li>
+          <li><a href="/">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="painel" aria-labelledby="introducao">
+      <div class="conteudo" >
+        <h1 id="introducao">Bicicletas Feitas a Mão</h1>
         <p>
           A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela
           vem equipada com os melhores acessórios da marca.
@@ -27,24 +30,29 @@
         <a id="vermais" href="/"> Ver Mais</a>
       </div>
       <img id="bicicleta" src="img/bicicleta.jpg" alt="Bicileta preta" />
-      <h2 id="slogan">Vantagens Bikcraft</h2>
-      <div id="caixas">
-        <div class="caixa">
+    </article>
+    <article id="painel" aria-labelledby="vantagens">
+      <h2 class="slogan" id="vantagens">Vantagens Bikcraft</h2>
+      <ul id="caixas">
+        <li class="caixa">
           <img src="img/eletrica.svg" alt="" />
           <h3>Motor Elétrico</h3>
           <p>Permite você viajar distâncias inimaginaveis com sua bike.</p>
-        </div>
-        <div class="caixa">
+        </li>
+        <li class="caixa">
           <img src="img/velocidade.svg" alt="" />
           <h3>40 Km/h</h3>
           <p>A mais rápida bicicleta elétrica disponível hoje no mercado.</p>
-        </div>
-        <div class="caixa">
+        </li>
+        <li class="caixa">
           <img src="img/rastreador.svg" alt="" />
           <h3>Motor Elétrico</h3>
           <p>Rastreador e sistema anti-furto para garantir o seu sossego.</p>
-        </div>
-      </div>
+        </li>
+      </ul>
+
+      </article>
+    </main>
       <footer>
         <p>Bikcraft. Alguns Direitos Reservados.</p>
       </footer>
