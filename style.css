@@ -24,6 +24,12 @@ ul {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -33,6 +39,11 @@ a {
 p {
   color: black;
   font-size: 1.3rem;
+}
+header {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
 }
 #marca {
   padding: 1.2rem;
@@ -65,8 +76,8 @@ a {
 
 .painel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+
   padding-top: 30px;
   max-width: 1000px;
 }
@@ -108,7 +119,7 @@ a {
 #vermais {
   background-color: #ee2211;
   border-radius: 4px;
-  color: white;
+  color: #fff;
   align-self: start;
   padding: 1.1rem 2rem;
 }
@@ -138,6 +149,7 @@ a {
   background-color: #f7f7f7;
 }
 
+
 .caixa {
   padding: 15px;
   display: grid;
@@ -162,6 +174,7 @@ a {
 footer {
   background: #fff;
   width: 100%;
+
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
