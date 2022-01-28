@@ -194,6 +194,7 @@ footer {
   .painel {
     grid-template-columns: 1fr;
     justify-items: center;
+    padding-top: 0px;
   }
   .conteudo::after {
     display: none;
