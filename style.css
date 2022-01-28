@@ -68,7 +68,7 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
   padding-top: 30px;
-  width: 1000px;
+  max-width: 1000px;
 }
 
 .conteudo {
