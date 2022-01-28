@@ -4,15 +4,20 @@
 }
 
 body {
-  margin: auto;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f7f7;
-  margin-top: 40px;
+  margin: 0px;
   display: grid;
-  gap: 20px;
+  gap: 60px;
   justify-items: center;
+  margin-top: 60px;
+  background-color: #f7f7f7;
 }
 
+header {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
 ul {
   list-style: none;
   margin: 0;
@@ -29,53 +34,50 @@ p {
   color: black;
   font-size: 1.3rem;
 }
-
-header {
-  display: grid;
-  gap: 2rem;
-  margin-top: 1.3rem;
-  justify-items: center;
-}
 #marca {
   padding: 1.2rem;
 }
 a {
   text-transform: uppercase;
+  display: block;
 }
-#links li {
+#nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#nav li {
   margin: 0rem 1.5rem;
 }
 
-#links {
-  padding: 1rem;
-  gap: 30px;
-  display: flex;
-}
-#links a {
+#nav a {
+  background: #ffffff;
   padding: 1.1rem 1.2rem;
   gap: 30px;
-  border: 2px solid white;
+  border: 2px solid transparent;
+  display: block;
 }
-#links a:hover {
+#nav a:hover {
   border: 2px solid #e21;
   border-radius: 4px;
 }
 
 .painel {
-  justify-content: center;
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
   padding-top: 30px;
+  max-width: 1000px;
 }
 
 .conteudo {
   display: grid;
   text-align: right;
-  justify-content: center;
   justify-content: end;
+  justify-items: end;
   position: relative;
   padding: 40px;
-  height: 300px;
 }
 
 .conteudo::after {
@@ -95,16 +97,18 @@ a {
 }
 
 #bicicleta {
-  width: 500px;
-  justify-self: left;
-  grid-column: 2;
+  max-width: 100%;
+  display: block;
+}
+#cover img {
+  object-fit: cover;
+  height: 100%;
 }
 
 #vermais {
   background-color: #ee2211;
   border-radius: 4px;
   color: white;
-  justify-self: end;
   align-self: start;
   padding: 1.1rem 2rem;
 }
@@ -139,7 +143,7 @@ a {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
-  border-left: 3px solid white;
+  border-left: 3px solid transparent;
 }
 
 .caixa:hover {
@@ -147,7 +151,6 @@ a {
 }
 
 .caixa img {
-  grid-column: 1;
   position: relative;
   left: 10px;
   top: -2px;
@@ -157,8 +160,62 @@ a {
   grid-column: 2;
 }
 footer {
-  margin-top: 40px;
-  padding: 30px;
-  grid-column: 1/-1;
+  background: #fff;
+  width: 100%;
   text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .painel-vantagem {
+    grid-template-columns: 1fr;
+  }
+
+  #cover {
+    margin: auto;
+    max-width: 600px;
+  }
+
+  .slogan {
+    text-align: center;
+  }
+
+  .caixa {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .painel {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .conteudo::after {
+    display: none;
+  }
+
+  header {
+    gap: 10px;
+  }
+  .conteudo {
+    gap: 10px;
+    max-width: 500px;
+    justify-items: center;
+    text-align: start;
+  }
+  #introducao {
+    text-align: center;
+  }
+  #vermais {
+    justify-self: center;
+  }
+  .slogan {
+    font-size: 3rem;
+  }
 }
