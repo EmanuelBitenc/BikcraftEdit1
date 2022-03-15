@@ -1,3 +1,31 @@
+:root {
+  --text-color: #000;
+  --text-color-link: #fff;
+  --body-background: #f7f7f7;
+  --principal-color: #ee2211;
+  --principal-colorDark: #900;
+
+  --slogan-color: #8f8f8f;
+  --text-color-p: #000;
+  --nth: #f7f7f7;
+
+  --onda: url(img/onda-clara.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color-p: #fff;
+    --nth: #1a1a1a;
+    --text-color: rgb(221, 221, 221);
+    --body-background: #0f0f0f;
+    --principal-color: #ee2211;
+    --principal-colorDark: #900;
+    --background-box: #1a1a1a;
+    --slogan-color: #1f1f1f;
+    --onda: url(img/onda-escura.svg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +38,7 @@ body {
   gap: 60px;
   justify-items: center;
   margin-top: 60px;
-  background-color: #f7f7f7;
+  background-color: var(--body-background);
 }
 
 header {
@@ -26,12 +54,12 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   padding: 1rem 1.2rem;
   display: block;
 }
 p {
-  color: black;
+  color: var(--text-color);
   font-size: 1.3rem;
 }
 #marca {
@@ -49,7 +77,7 @@ a {
 }
 
 #nav a {
-  background: #ffffff;
+  background: var(--background-box);
   padding: 1rem 2rem;
   gap: 30px;
   border: 2px solid transparent;
@@ -58,7 +86,7 @@ a {
   display: block;
 }
 #nav a:hover {
-  border: 2px solid #e21;
+  border: 2px solid var(--principal-color);
   border-radius: 5px;
 }
 
@@ -83,7 +111,7 @@ a {
   content: "";
   width: 60px;
   height: 4px;
-  background: #e21;
+  background: var(--principal-color);
   position: absolute;
   top: 20px;
   right: -30px;
@@ -93,6 +121,7 @@ a {
   align-self: end;
   font-size: 2rem;
   padding-bottom: 18px;
+  color: var(--text-color-p);
 }
 
 #bicicleta {
@@ -105,21 +134,21 @@ a {
 }
 
 #vermais {
-  background-color: #ee2211;
+  background-color: var(--principal-color);
   border-radius: 4px;
-  color: white;
+  color: var(--text-color-link);
   align-self: start;
   padding: 1.1rem 2rem;
 }
 
 #vermais:hover {
-  background-color: #900;
+  background-color: var(--principal-colorDark);
 }
 
 .slogan {
-  background-image: url(img/onda.svg);
+  background: var(--onda);
 
-  color: #c6c6c6;
+  color: var(--slogan-color);
   font-size: 64px;
   text-transform: uppercase;
   text-align: end;
@@ -134,7 +163,7 @@ a {
   gap: 20px;
 }
 #caixas .caixa:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--nth);
 }
 
 .caixa {
@@ -143,10 +172,13 @@ a {
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   border-left: 3px solid transparent;
+  color: var(--text-color);
+
+  background-color: var(--background-box);
 }
 
 .caixa:hover {
-  border-left: 3px solid rgb(177, 0, 0);
+  border-left: 3px solid var(--principal-color);
 }
 
 .caixa img {
@@ -158,8 +190,11 @@ a {
 .caixa h3 {
   grid-column: 2;
 }
+.caixa h3 {
+  color: var(--text-color-p);
+}
 footer {
-  background: #fff;
+  background: var(--body-background);
   width: 100%;
   text-align: center;
   padding: 40px;
